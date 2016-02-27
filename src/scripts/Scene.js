@@ -5,5 +5,8 @@ class Scene {
         this.ctx.canvas.height = window.innerHeight;
         this.ctx.canvas.width = window.innerWidth;
     }
+    name(){
+        return 'I am scene';
+    }
 }
 export default Scene;
