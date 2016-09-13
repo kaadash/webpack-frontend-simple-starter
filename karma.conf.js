@@ -3,12 +3,12 @@ var webpack = require('karma-webpack');
 module.exports = function (config) {
     config.set({
         browsers: [ 'Chrome' ], //run in Chrome
-        singleRun: true, //just run once by default
+        singleRun: false, //just run once by default
         frameworks: [ 'jasmine' ],
         files: [
             './src/tests/*-test.js' //just load this file
         ],
-        plugins: [webpack, 'karma-jasmine'],
+        plugins: [webpack, 'karma-jasmine', 'karma-chrome-launcher', 'karma-webpack'],
         preprocessors: {
             './src/tests/*-test.js': ['webpack'] //preprocess with webpack and our sourcemap loader
         },
